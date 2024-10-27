@@ -141,7 +141,7 @@ footer {
 }
 
 footer a{
-    color: color:#0f52bd;
+    color: #0f52bd;
 }
 /* Scrollable Table */
 .scrollable-table {
@@ -261,37 +261,6 @@ div.athlete:hover {
     font-size: 1.1rem;
     margin-top: 1rem;
     width: 100%;
-}
-
-/* Responsive table design to fit on small screens without horizontal scrolling */
-@media (min-width: 600px) {
-    table, thead, tbody, th, tr, td {
-        display: block; /* Convert table elements to block */
-    }
-
-    thead {
-        display: none; /* Hide table headers on small screens */
-    }
-
-    tr {
-        margin-bottom: 1rem; /* Add space between rows */
-    }
-
-    td {
-        position: relative; /* Position labels correctly */
-        padding-left: 50%;
-        text-align: right;
-    }
-
-    td:before {
-        content: attr(headers); /* Use headers attribute for label */
-        position: absolute;
-        left: 0;
-        width: 45%; /* Fit label within cell */
-        padding-left: 0.5rem;
-        font-weight: bold;
-        text-align: left; /* Align labels to left */
-    }
 }
 
 /* Dark Mode using user's preference */
