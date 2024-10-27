@@ -140,6 +140,9 @@ footer {
     animation: fadeIn 1.5s ease-in-out;
 }
 
+footer a{
+    color: color:#0f52bd;
+}
 /* Scrollable Table */
 .scrollable-table {
     max-height: 300px;
@@ -320,5 +323,17 @@ div.athlete:hover {
     }
     to {
         opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0s !important;
+        transition-duration: 0s !important;
+        scroll-behavior: auto !important;
+    }
+
+    nav ul li a, nav ul li a:hover {
+        transition: none !important;
     }
 }
