@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: var(--background-color, #ffffff);
+    color: var(--text-color, #000000);
+    transition: background-color 0.3s, color 0.3s;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header {
+    background: var(--header-background, lightskyblue);
+    color: var(--header-text-color, black);
+    padding: 2rem 1rem; /* Increase padding */
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+header .logo {
+    margin-bottom: 1rem;
+}
+
+header .logo img {
+    display: block;
+    margin: 0 auto; /* Center the logo */
+    height: auto;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+header h1 {
+    font-size: 2rem; /* Increase font size */
+    font-family: 'Arial Black', Gadget, sans-serif; /* Bold font */
+    margin: 0.5rem 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Add text shadow */
+}
+
+nav {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0; /* Add margin for spacing */
+    display: flex;
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center;
+}
+
+nav ul li {
+    margin-bottom: 0.5rem; /* Add spacing between menu items */
+}
+
+nav ul li a {
+    color: var(--link-color, black);
+    text-decoration: none;
+    border-radius: 5px;
+    border-color: #000000;
+    background-color: var(--nav-item-bg, rgba(0, 0, 0, 0.1)); /* Background color */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hover animation */
+}
+
+nav ul li a:hover {
+    background-color: var(--nav-item-hover-bg, rgba(255, 255, 255, 0.3));
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+main {
+    padding: 1rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Ensure table fits within the screen width and is scrollable if necessary */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    overflow-x: auto; /* Enable horizontal scrolling within the table container */
+    display: block; /* Ensure the table container is block-level */
+    background: var(--table-background, white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    word-break: break-word; /* Wrap text within cells */
+}
+
+table, th, td {
+    border: 1px solid var(--border-color, #ddd);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--row-odd-bg, #f9f9f9); /* Light gray for odd rows */
+}
+
+table tr:nth-child(even) {
+    background-color: var(--row-even-bg, #ffffff); /* White for even rows */
+}
+
+th {
+    background: var(--table-header-bg, #f4f4f4);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+footer {
+    background: var(--footer-bg, #333);
+    color: var(--footer-text-color, white);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Scrollable Table */
+.scrollable-table {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color, #ddd);
+    display: block; /* Ensure the table container is block-level */
+}
+
+.scrollable-table table {
+    width: 100%;
+    display: block; /* Ensure the table container is block-level */
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column; /* Stack results vertically */
+}
+
+.results-container .result {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+div.athlete {
+    border: 5px solid black;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+figure img {
+    width: auto;
+    display: block;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+figcaption {
+    color: var(--figcaption-color, black);
+    text-align: center;
+    font-size: 200%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+div.athlete {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: var(--athlete-bg, #f9f9f9);
+    padding: 1rem;
+    border-radius: 5px;
+    transition: transform 0.2s ease; /* Smooth transition */
+}
+
+div.athlete:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Ensure image is wrapped inside figure */
+.athlete figure {
+    margin: 0;
+    margin-right: 1rem; /* Space between image and text */
+    flex-shrink: 0; /* Prevent shrinking of the figure */
+}
+
+.athlete img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ensure the image covers the element area */
+    border-radius: 50%;
+    border: 2px solid blue;
+    padding: 5px;
+    background: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Additional styling for athlete details */
+.athlete {
+    flex-wrap: wrap; /* Support wrapping on smaller screens */
+    border: 1px solid var(--border-color, #ddd); /* Add border to Athlete card */
+}
+
+.athlete figure {
+    margin: 0;
+    margin-right: 1rem; /* Space between image and dl */
+    flex-shrink: 0; /* Prevent shrinking of the figure */
+}
+
+.athlete img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ensure the image covers the element area */
+    border-radius: 50%;
+    border: 2px solid blue;
+    padding: 5px;
+    background: white;
+}
+
+.athlete dl {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Define two-column layout */
+    gap: 0.5rem 1rem; /* Space between terms and values */
+}
+
+.athlete dt {
+    font-weight: bold;
+    color:var(--athlete-dt, #333);
+}
+
+.athlete dd {
+    margin: 0;
+    color:var(--athlete-dd,#555;)
+}
+
+.athlete figcaption {
+    color: var(--figcaption-color, black);
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* Responsive table design to fit on small screens without horizontal scrolling */
+@media (min-width: 600px) {
+    table, thead, tbody, th, tr, td {
+        display: block; /* Convert table elements to block */
+    }
+
+    thead {
+        display: none; /* Hide table headers on small screens */
+    }
+
+    tr {
+        margin-bottom: 1rem; /* Add space between rows */
+    }
+
+    td {
+        position: relative; /* Position labels correctly */
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        content: attr(headers); /* Use headers attribute for label */
+        position: absolute;
+        left: 0;
+        width: 45%; /* Fit label within cell */
+        padding-left: 0.5rem;
+        font-weight: bold;
+        text-align: left; /* Align labels to left */
+    }
+}
+
+/* Dark Mode using user's preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --text-color: #e0e0e0;
+        --header-background: lightskyblue;
+        --header-text-color: black;
+        --link-color: #0b2b5f;
+        --table-background: #242424;
+        --table-header-bg: #333;
+        --row-odd-bg: #2a2a2a;
+        --row-even-bg: #1d1d1d;
+        --figcaption-color: white;
+        --athlete-bg: #2a2a2a;
+        --athlete-dt: white;
+        --athlete-dd: white;
+        --footer-bg: #222;
+        --footer-text-color: #e0e0e0;
+        --border-color: #444;
+    }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
